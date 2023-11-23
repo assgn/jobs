@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <main className={`${mavenpro.variable} p-6`} >
+  return <main className={`${mavenpro.variable}`} >
     <Layout>
       <Component {...pageProps} />
     </Layout>

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const CompanyList = () => {
     const router = useRouter();
     return (
-        <div className=" py-4">
+        <div className="p-6 py-4">
             <h1 className=" text-3xl font-bold border-b-2 border-neutral-300">
                 A
             </h1>

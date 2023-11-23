@@ -3,7 +3,7 @@ import SearchBar from "../components/searchBar"
 
 const Home = () => {
   return (
-    <div className=" font-mavenpro py-5">
+    <div>
       <SearchBar />
       <CompanyList />
     </div>

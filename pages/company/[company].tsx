@@ -2,13 +2,19 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import locationSVG from "../../public/location.svg"
 import Path from "../../components/path";
+import RedirectPage from "../../components/redirectPage";
+import useRedirectPage from "../../hooks/useRedirectPage";
 
 const CompanyPage = () => {
     const router = useRouter();
+    const redirectPage = useRedirectPage();
     const { company } = router.query;
+    const openRedirect = () => {
+        redirectPage.onOpen()
+    }
     return (
-        <div className=" py-8 font-mavenpro">
-            <Path company={company as string} />
+        <div className=" py-8 font-mavenpro p-6">
+            <Path />
             <h1 className=" text-5xl font-bold text-neutral-900">
                 {company}
             </h1>
@@ -29,7 +35,7 @@ const CompanyPage = () => {
                         Software Engineer 1
                     </h1>
                     <div className=" flex justify-end items-center pt-3">
-                        <button className="p-2 px-5 text-xl rounded-lg tracking-wider text-neutral-100 font-medium bg-gradient-to-tl from-neutral-700 via-neutral-900 to-neutral-700 drop-shadow-lg">apply</button>
+                        <button className="p-2 px-5 text-xl rounded-lg tracking-wider text-neutral-100 font-medium bg-gradient-to-tl from-neutral-700 via-neutral-900 to-neutral-700 drop-shadow-lg" onClick={openRedirect}>apply</button>
                     </div>
                 </div>
 
@@ -47,7 +53,7 @@ const CompanyPage = () => {
                         Software Engineer 1
                     </h1>
                     <div className=" flex justify-end items-center pt-3">
-                        <button className="p-2 px-5 text-xl rounded-lg tracking-wider text-neutral-100 font-medium bg-gradient-to-tl from-neutral-700 via-neutral-900 to-neutral-700 drop-shadow-lg">apply</button>
+                        <button className="p-2 px-5 text-xl rounded-lg tracking-wider text-neutral-100 font-medium bg-gradient-to-tl from-neutral-700 via-neutral-900 to-neutral-700 drop-shadow-lg" onClick={openRedirect}>apply</button>
                     </div>
                 </div>
             </div>
