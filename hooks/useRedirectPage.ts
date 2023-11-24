@@ -11,7 +11,7 @@ type redirectPageStore = {
 };
 
 const useRedirectPage = create<redirectPageStore>((set) => ({
-  isOpen: true,
+  isOpen: false,
   openLink: "",
   companyName: "",
   positionName: "",
