@@ -3,9 +3,10 @@ import useRedirectPage from "../hooks/useRedirectPage";
 
 type redirectProps = {
     seconds: number
+    link: string
 }
 
-const RedirectingTimer = ({ seconds }: redirectProps) => {
+const RedirectingTimer = ({ seconds, link }: redirectProps) => {
     const totalWaitTime = seconds + 1;
     const [time, setTime] = useState(0);
     const redirectPage = useRedirectPage();
@@ -24,6 +25,7 @@ const RedirectingTimer = ({ seconds }: redirectProps) => {
     const currentWaitTime = (totalWaitTime - 1) - time % totalWaitTime;
     if (currentWaitTime == 0) {
         redirectPage.onClose();
+        window.open(link)
     }
     return (
         <div className="">
