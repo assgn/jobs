@@ -4,8 +4,8 @@ const Path = () => {
     const router = useRouter();
     const back = "- go back"
     return (
-        <div className=" flex font-medium text-neutral-600">
-            <p onClick={() => router.back()}>{back}</p>
+        <div className=" flex font-medium text-neutral-600" onClick={() => router.back()}>
+            <p>{back}</p>
         </div>
     );
 }

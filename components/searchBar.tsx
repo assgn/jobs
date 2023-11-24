@@ -10,7 +10,7 @@ const SearchBar = () => {
                     <input type="text" name="Search" placeholder="Ex: Zerodha" className=" p-3 w-full border-2 border-e-0 border-neutral-300 bg-transparent font-mavenpro outline-none text-xl font-medium rounded-s-xl focus:border-neutral-600 focus:border-e-0" />
                 </div>
                 <div>
-                    <button className=" p-3 bg-black text-xl border-2 border-neutral-800 text-neutral-300 rounded-e-lg bg-gradient-to-t from-neutral-700 via-neutral-950 to-neutral-900"> Search</button>
+                    <button className=" p-3 bg-black text-xl border-2 border-neutral-800 text-neutral-300 rounded-e-lg bg-gradient-to-t from-neutral-700 via-neutral-950 to-neutral-900 font-mavenpro"> Search</button>
                 </div>
             </div>
         </div>

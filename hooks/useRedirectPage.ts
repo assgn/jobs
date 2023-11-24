@@ -7,7 +7,7 @@ type redirectPageStore = {
 };
 
 const useRedirectPage = create<redirectPageStore>((set) => ({
-  isOpen: true,
+  isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
 }));
