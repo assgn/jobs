@@ -1,6 +1,6 @@
 const SearchBar = () => {
     return (
-        <div className=" select-none">
+        <div >
             <div className=" flex flex-col items-center justify-center gap-2 py-6">
                 <h1 className=" text-3xl font-semibold text-neutral-800">Jobs from</h1>
                 <h1 className=" text-6xl font-extrabold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent">Everywhere</h1>
