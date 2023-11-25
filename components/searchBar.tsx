@@ -30,7 +30,12 @@ const SearchBar = () => {
             </div>
             <div className=" flex items-center w-full justify-center">
                 <div className=" bg-neutral-100 ">
-                    <input type="text" name="Search" placeholder="Search Company" className=" p-3 w-full border-2 border-e-0 border-neutral-300 bg-transparent font-mavenpro outline-none text-xl font-medium rounded-s-xl focus:border-neutral-600 focus:border-e-0" onChange={(e) => setSearchString(e.target.value)} />
+                    <input type="text" name="Search" placeholder="Search Company" className=" p-3 w-full border-2 border-e-0 border-neutral-300 bg-transparent font-mavenpro outline-none text-xl font-medium rounded-s-xl focus:border-neutral-600 focus:border-e-0" onChange={(e) => {
+                        const value = (e.target.value).toLowerCase()
+                        setSearchString(value)
+                    }
+                    }
+                    />
                 </div>
                 <div>
                     <button className=" p-3 bg-black text-xl border-2 border-neutral-800 text-neutral-300 rounded-e-lg bg-gradient-to-t from-neutral-700 via-neutral-950 to-neutral-900 font-mavenpro"> Search</button>
