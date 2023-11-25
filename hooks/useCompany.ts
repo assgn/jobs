@@ -18,6 +18,7 @@ export const useCompany = ({ company, url }: companyDataProps) => {
   const { data, isLoading, error, mutate } = useSWR(url, fetcher);
 
   let response: companyObject[] = [];
+
   if (company === "zoho" && !isLoading) {
     data.data.map((ele: any) => {
       const jobName = ele.Job_Opening_Name.toLowerCase();
@@ -36,6 +37,19 @@ export const useCompany = ({ company, url }: companyDataProps) => {
         };
         response.push(obj);
       }
+    });
+  }
+
+  if (company === "cred" && !isLoading) {
+    data.map((ele: any) => {
+      const obj: companyObject = {
+        company: "Cred",
+        title: ele.text,
+        link: ele.applyUrl,
+        type: ele.categories.commitment,
+        location: ele.country,
+      };
+      response.push(obj);
     });
   }
 
