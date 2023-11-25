@@ -47,9 +47,9 @@ const SearchBar = () => {
                             :
                             <div className=" px-6 py-3 m-3">
                                 {
-                                    data.map((ele: any) => {
+                                    data.map((ele: any, index) => {
                                         return (
-                                            <div className=" flex gap-4 py-2">
+                                            <div className=" flex gap-4 py-2" key={index}>
                                                 {
 
                                                     ele.map((company: any) => {
