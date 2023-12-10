@@ -39,6 +39,19 @@ export const useCompany = ({ company, url }: companyDataProps) => {
       }
     });
   }
+  if (company === "amazon" && !isLoading) {
+    console.log(data)
+    // data.data.map((ele: any) => {
+    //     const obj: companyObject = {
+    //       company: "Amazon",
+    //       title: ele.Job_Opening_Name,
+    //       link: ele.$url,
+    //       type: ele.Job_Type,
+    //       location: ele.Country1,
+    //     };
+    //     response.push(obj);
+    // });
+  }
 
   if (company === "cred" && !isLoading) {
     data.map((ele: any) => {
