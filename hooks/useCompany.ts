@@ -20,6 +20,7 @@ export const useCompany = ({ company, url }: companyDataProps) => {
   let response: companyObject[] = [];
 
   if (company === "zoho" && !isLoading) {
+    console.log(data)
     data.data.map((ele: any) => {
       const jobName = ele.Job_Opening_Name.toLowerCase();
       if (
@@ -37,6 +38,19 @@ export const useCompany = ({ company, url }: companyDataProps) => {
         };
         response.push(obj);
       }
+    });
+  }
+  if (company === "amazon" && !isLoading) {
+    console.log(data)
+    data.data.map((ele: any) => {
+        const obj: companyObject = {
+          company: "Amazon",
+          title: ele.title,
+          link: ele.applyLink,
+          type: ele.experience,
+          location: ele.location,
+        };
+        response.push(obj);
     });
   }
 

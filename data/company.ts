@@ -17,6 +17,15 @@ export const companies = [
   //   ],
   // },
   {
+    character: "a",
+    companyList: [
+      {
+        name: "amazon",
+        link: "https://www.naukri.com/amazon-overview-398058?tab=jobs&functionAreaIdGid=5&functionAreaIdGid=8&functionAreaIdGid=3&searchId=17022440542154303_17&src=orgCompanyListing",
+      },
+    ],
+  },
+  {
     character: "c",
     companyList: [
       {
